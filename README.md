@@ -46,19 +46,19 @@ Using GPIO from sysfs
 
 After the module is loaded, have a look in /sys/class/gpio. You should find a new bus entry. 
 
-# ls /sys/class/gpio/    
-export  gpiochip254@  unexport
+	ls /sys/class/gpio/    
+	export  gpiochip254@  unexport
 
 Now you can export the pins you wish to use with sysfs. In this example the new chip has base address 254, which relates to the first gpio on this chip.
 
-# echo 254 > /sys/class/gpio/export
+	echo 254 > /sys/class/gpio/export
 
 Set the direction and query / set the pin value
 
-# echo in > /sys/class/gpio/gpio254/direction
-# cat /sys/class/gpio/gpio254/value
-# echo out > /sys/class/gpio/gpio254/direction
-# echo 0 > /sys/class/gpio/gpio254/value
+	echo in > /sys/class/gpio/gpio254/direction
+	cat /sys/class/gpio/gpio254/value
+	echo out > /sys/class/gpio/gpio254/direction
+	echo 0 > /sys/class/gpio/gpio254/value
 
 
 I2C Bitbanging
