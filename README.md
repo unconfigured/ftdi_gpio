@@ -1,7 +1,8 @@
+[![noswpatv3](http://zoobab.wdfiles.com/local--files/start/noupcv3.jpg)](https://ffii.org/donate-now-to-save-europe-from-software-patents-says-ffii/)
 ftdi_gpio
 =========
 
-This kernel module enables you to access the CBUS pins of the FT232R chip as GPIs. The CBUS-Pins are 5 additional pins beside the UART Pins which are normaly used on the chip to get a USB-Serial console.
+This kernel module enables you to access the CBUS pins of the FT232R chip as GPIOs. The CBUS-Pins are 5 additional pins beside the UART Pins which are normaly used on the chip to get a USB-Serial console.
 
 This is a first attempt to make this pins available as gpio kernel module - but I am not a kernel hacker. So feel free to improve and extend. Code is borought from libfti, other gpio kernel modules and the ftdi_sio module. What helped me to get started was the knowledge, that the usb calls from libfti (uses libusb api) are nearly the same as the ones used in kernel, so porting the usb calls is very easy.
 
